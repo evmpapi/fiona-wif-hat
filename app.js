@@ -218,7 +218,7 @@
   }
 
   /* ----- official X embeds: load widgets.js only when the wall is near ----- */
-  var tweetWall = document.getElementById("fiona-posts") || document.getElementById("tweet-wall");
+  var tweetWall = document.getElementById("heaven") || document.getElementById("fiona-posts") || document.getElementById("tweet-wall");
   if (tweetWall) {
     var tweetsLoaded = false;
     var loadTweets = function () {
