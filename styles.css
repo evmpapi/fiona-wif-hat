@@ -1,6 +1,5 @@
-/* $FIONA — late-90s / early-2000s parody homepage
-   "Donate to save the zoo animals" millennial energy,
-   except it is not a charity and funds no zoo. */
+/* $FIONA — late-90s / early-2000s parody homepage.
+   Not a charity, and not affiliated with any zoo. */
 
 :root {
   --pond: #0a4a32;
@@ -533,6 +532,35 @@ main {
 }
 .btn-tg:visited { color: #002 !important; }
 
+/* contract address — sits directly under the hero */
+.ca-strip {
+  text-align: center;
+  background: #12060c;
+  color: #fff;
+  padding: 16px 16px 18px;
+  border-top: 4px ridge #ffcc66;
+  border-bottom: 4px ridge #ffcc66;
+}
+.ca-strip label {
+  display: block;
+  font-family: var(--comic);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #ffe44d;
+  margin: 0 0 8px;
+}
+.ca-strip .ca-box {
+  max-width: 52em;
+  margin: 0 auto 10px;
+  font-size: 14px;
+  text-align: left;
+}
+.ca-strip .btn-copy {
+  background: linear-gradient(#ffe27a, #ff9a3c);
+  font-weight: 900;
+  border: 3px outset #ffcc66;
+}
+
 /* contract address */
 .ca-box {
   background: #111;
@@ -1059,7 +1087,7 @@ body.lb-open { overflow: hidden; }
   .nav { font-size: 13px; padding: 8px 6px 10px; }
   .construction { margin-top: 4px; }
   main { padding: 10px 8px 20px; }
-  section, #guestbook, #webring, #honor, #sponsor, #howto, #chart, #album, #fiona-posts, #news, #home, #manifesto, #profile-song, #top8 {
+  section, #guestbook, #webring, #honor, #ca, #howto, #chart, #album, #fiona-posts, #news, #home, #profile-song {
     scroll-margin-top: 52px;
     scroll-margin-bottom: 108px;
   }

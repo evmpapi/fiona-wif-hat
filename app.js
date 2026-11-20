@@ -166,8 +166,8 @@
   /* ----- guestbook (local only) ----- */
   var SEED = [
     { name: "WebSurfer98", msg: "gone but not forgotten. you were a real one, Fiona. i will bookmark this memorial.", date: "Nov 19, 2026" },
-    { name: "xX_hat_lord_Xx", msg: "ate the hat, couldn't help myself. rest easy. the beanie looked perfect.", date: "Nov 19, 2026" },
-    { name: "Millie Longscarf", msg: "saving you a seat at the end of my scarf. love you, pal.", date: "Nov 19, 2026" }
+    { name: "xX_hat_lord_Xx", msg: "rest easy. the beanie looked perfect.", date: "Nov 19, 2026" },
+    { name: "pondlurker", msg: "dogs wear hats. hippos eat them. love you, Fiona.", date: "Nov 19, 2026" }
   ];
   var gbList = document.getElementById("gb-list");
   var gbForm = document.getElementById("gb-form");

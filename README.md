@@ -8,7 +8,7 @@ In loving memory of Fiona Wif Hat, ???? – 2026. She was a hippo who saw a hat 
 
 ## This is a parody, not a charity
 
-The "honor Fiona" / "sponsor a hip zoo animal" framing is a joke. **No money goes to a zoo, a sanctuary, a rescue, or any animal.** The site uses no real zoo's name or logo, and the "hip zoo animals" are invented cartoons. $FIONA is a memecoin with no intrinsic value, and nothing on this page is financial advice.
+This is a parody memorial for a memecoin. **It is not a charity, and it is not affiliated with any zoo, park, or animal organization.** $FIONA is a memecoin with no intrinsic value, and nothing on this page is financial advice.
 
 ## How this is built
 
@@ -49,7 +49,7 @@ Then open http://localhost:8080
 
 ## License / credit
 
-Art is Fiona in a beanie. The site is a parody of late-90s "save the animals" homepages, not an affiliation with any zoo or park.
+Art is Fiona in a beanie. The site is a late-90s-style parody homepage, not an affiliation with any zoo or park.
 
 The Photo Album includes one openly licensed photograph: [Fiona the Hippopotamus](https://commons.wikimedia.org/wiki/File:Fiona_the_Hippopotamus.jpg) by DarthBotto, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), via Wikimedia Commons (resized for the web). A search of Wikimedia Commons, Flickr, Openverse, and public-domain sources found only this one unique photograph of Fiona under CC BY, CC BY-SA, CC0, or public domain. The beanie pictures are original site meme art.
 
