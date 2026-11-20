@@ -4,11 +4,11 @@ A one-page, late-90s / GeoCities-style homepage for the [$FIONA](https://pump.fu
 
 Live: <https://fiona-wif-hat.surge.sh/>
 
-Fiona is a hippo who saw a hat and simply ate it. Dogs wear hats. Hippos eat them.
+In loving memory of Fiona Wif Hat, ???? – 2026. She was a hippo who saw a hat and simply ate it. Gone but not forgotten. Dogs wear hats. Hippos eat them.
 
 ## This is a parody, not a charity
 
-The "adopt a hippo" / "sponsor Fiona's hat fund" framing is a joke. **No money goes to a zoo, a sanctuary, a rescue, or any animal.** The site uses no real zoo's name or logo. $FIONA is a memecoin with no intrinsic value, and nothing on this page is financial advice.
+The "honor Fiona" / "sponsor a hip zoo animal" framing is a joke. **No money goes to a zoo, a sanctuary, a rescue, or any animal.** The site uses no real zoo's name or logo, and the "hip zoo animals" are invented cartoons. $FIONA is a memecoin with no intrinsic value, and nothing on this page is financial advice.
 
 ## How this is built
 
@@ -17,8 +17,8 @@ Static HTML, CSS, and JS. No build step, no framework, no Netlify/Vercel require
 ```
 index.html      the page
 styles.css      the look
-config.js       contract, buy link, chart, socials  <-- edit this
-app.js          copy-CA, guestbook, counter, sparkles
+config.js       contract, buy link, chart, socials, profile song  <-- edit this
+app.js          copy-CA, guestbook, counter, sparkles, YouTube player
 assets/         images, tiles, 88x31 badges, OG card
 assets/memes/   downloadable 1000x1000 PNGs
 ```
@@ -37,6 +37,10 @@ socials: {
 ```
 
 The contract address, pump.fun buy link, and DexScreener chart URLs also live in that same file.
+
+## Profile song
+
+Fiona's Profile Song is an official YouTube embed of Celine Dion's "My Heart Will Go On" (CelineDionVEVO). The video ID lives in `config.js` as `songYoutubeId`. We do not download or host the audio. The player does not autoplay.
 
 ## Local preview
 

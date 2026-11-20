@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="A cartoon flamingo wearing a gold chain">
+  <rect width="200" height="200" rx="16" fill="#f7c6d8"/>
+  <ellipse cx="100" cy="188" rx="50" ry="8" fill="#000" opacity=".12"/>
+  <!-- legs -->
+  <rect x="94" y="140" width="5" height="42" fill="#f0c14a"/>
+  <rect x="108" y="148" width="5" height="34" fill="#f0c14a"/>
+  <ellipse cx="90" cy="184" rx="14" ry="5" fill="#f0c14a"/>
+  <ellipse cx="120" cy="184" rx="14" ry="5" fill="#f0c14a"/>
+  <!-- body -->
+  <ellipse cx="108" cy="118" rx="36" ry="28" fill="#ff7eb3"/>
+  <path d="M80 110 Q40 70 70 50" fill="none" stroke="#ff7eb3" stroke-width="16" stroke-linecap="round"/>
+  <!-- head -->
+  <circle cx="70" cy="44" r="18" fill="#ff7eb3"/>
+  <circle cx="64" cy="42" r="4" fill="#221"/>
+  <circle cx="65.3" cy="40.8" r="1.2" fill="#fff"/>
+  <path d="M52 46 L28 50 L52 54" fill="#f0c14a" stroke="#c49010" stroke-width="1"/>
+  <path d="M28 50 L52 50" stroke="#c49010" stroke-width="1"/>
+  <!-- chain -->
+  <path d="M90 100 Q108 128 130 100" fill="none" stroke="#e6c200" stroke-width="5"/>
+  <path d="M90 100 Q108 128 130 100" fill="none" stroke="#fff3a0" stroke-width="1.5"/>
+  <rect x="96" y="124" width="24" height="16" rx="2" fill="#e6c200" stroke="#9a7a00" stroke-width="1.5"/>
+  <text x="108" y="136" text-anchor="middle" font-size="9" font-family="Comic Sans MS, Comic Neue, sans-serif" font-weight="700" fill="#7a5b00">PINK</text>
+  <!-- wing -->
+  <ellipse cx="124" cy="118" rx="16" ry="10" fill="#ff9bc4"/>
+</svg>

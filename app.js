@@ -113,46 +113,42 @@
   var cap = document.getElementById("hit-caption");
   if (cap) cap.textContent = "You are visitor number " + shown + " (sort of)";
 
-  /* ----- certificate ----- */
-  var nameInput = document.getElementById("cert-name");
-  var who = document.getElementById("cert-who");
-  var dateEl = document.getElementById("cert-date");
-  if (dateEl) {
-    var now = new Date();
-    dateEl.textContent =
-      now.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
-  }
-  if (nameInput && who) {
-    var stored;
-    try { stored = localStorage.getItem("fiona-cert-name") || ""; } catch (e) { stored = ""; }
-    if (stored) {
-      nameInput.value = stored;
-      who.textContent = stored;
-    }
-    nameInput.addEventListener("input", function () {
-      var v = nameInput.value.trim() || "a friend of Fiona";
-      who.textContent = v;
-      try { localStorage.setItem("fiona-cert-name", nameInput.value.trim()); } catch (e) {}
-    });
-  }
-  var printBtn = document.getElementById("cert-print");
-  if (printBtn) {
-    printBtn.addEventListener("click", function () {
-      window.print();
+  /* ----- Fiona's Profile Song: official YouTube embed, no autoplay, click to play ----- */
+  var songId = (cfg.songYoutubeId || "").replace(/[^A-Za-z0-9_-]/g, "");
+  var songTitle = cfg.songTitle || "My Heart Will Go On";
+  var songArtist = cfg.songArtist || "Celine Dion";
+  var songLabel = document.getElementById("song-label");
+  if (songLabel) songLabel.textContent = songTitle + " — " + songArtist;
+  var playBtn = document.getElementById("song-play");
+  var stage = document.getElementById("song-stage");
+  if (playBtn && stage && songId) {
+    playBtn.addEventListener("click", function () {
+      if (stage.classList.contains("is-on")) return;
+      var iframe = document.createElement("iframe");
+      iframe.src =
+        "https://www.youtube-nocookie.com/embed/" +
+        songId +
+        "?autoplay=1&rel=0&modestbranding=1";
+      iframe.title = songTitle + " — " + songArtist + " (official YouTube embed)";
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+      iframe.allowFullscreen = true;
+      iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+      stage.classList.add("is-on");
+      stage.appendChild(iframe);
     });
   }
 
   /* ----- guestbook (local only) ----- */
   var SEED = [
-    { name: "Fiona", msg: "the hat was delicious. no further questions.", date: "Nov 19, 2026" },
-    { name: "WebSurfer98", msg: "cool site!!! i will bookmark this and tell all my AOL buddies", date: "Nov 19, 2026" },
-    { name: "xX_hat_lord_Xx", msg: "dogs wear hats. hippos eat them. finally someone said it.", date: "Nov 19, 2026" }
+    { name: "WebSurfer98", msg: "gone but not forgotten. you were a real one, Fiona. i will bookmark this memorial.", date: "Nov 19, 2026" },
+    { name: "xX_hat_lord_Xx", msg: "ate the hat, couldn't help myself. rest easy. the beanie looked perfect.", date: "Nov 19, 2026" },
+    { name: "Millie Longscarf", msg: "saving you a seat at the end of my scarf. love you, pal.", date: "Nov 19, 2026" }
   ];
   var gbList = document.getElementById("gb-list");
   var gbForm = document.getElementById("gb-form");
   var entries = [];
   try {
-    entries = JSON.parse(localStorage.getItem("fiona-guestbook") || "null") || SEED.slice();
+    entries = JSON.parse(localStorage.getItem("fiona-memorial-guestbook") || "null") || SEED.slice();
   } catch (e) {
     entries = SEED.slice();
   }
@@ -190,7 +186,7 @@
       });
       entries.push({ name: name.slice(0, 32), msg: msg.slice(0, 280), date: today });
       if (entries.length > 40) entries = entries.slice(-40);
-      try { localStorage.setItem("fiona-guestbook", JSON.stringify(entries)); } catch (e) {}
+      try { localStorage.setItem("fiona-memorial-guestbook", JSON.stringify(entries)); } catch (e) {}
       document.getElementById("gb-msg").value = "";
       renderGb();
     });

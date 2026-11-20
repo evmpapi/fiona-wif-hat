@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="A cartoon penguin wearing gold sunglasses">
+  <rect width="200" height="200" rx="16" fill="#7ec8e3"/>
+  <ellipse cx="100" cy="175" rx="55" ry="10" fill="#000" opacity=".15"/>
+  <!-- body -->
+  <ellipse cx="100" cy="115" rx="48" ry="62" fill="#1a1a28"/>
+  <ellipse cx="100" cy="125" rx="30" ry="44" fill="#f7f3ea"/>
+  <!-- head -->
+  <circle cx="100" cy="64" r="38" fill="#1a1a28"/>
+  <circle cx="86" cy="62" r="12" fill="#f7f3ea"/>
+  <circle cx="114" cy="62" r="12" fill="#f7f3ea"/>
+  <!-- shades -->
+  <rect x="62" y="54" width="76" height="20" rx="6" fill="#e6c200" stroke="#7a5b00" stroke-width="3"/>
+  <rect x="66" y="57" width="30" height="14" rx="3" fill="#222"/>
+  <rect x="104" y="57" width="30" height="14" rx="3" fill="#222"/>
+  <rect x="67" y="58" width="10" height="5" rx="1" fill="#fff" opacity=".5"/>
+  <rect x="105" y="58" width="10" height="5" rx="1" fill="#fff" opacity=".5"/>
+  <!-- beak -->
+  <polygon points="100,72 88,84 112,84" fill="#ff9f1c" stroke="#c56b00" stroke-width="1.5"/>
+  <!-- flippers -->
+  <ellipse cx="52" cy="120" rx="14" ry="28" fill="#1a1a28" transform="rotate(-20 52 120)"/>
+  <ellipse cx="148" cy="120" rx="14" ry="28" fill="#1a1a28" transform="rotate(20 148 120)"/>
+  <!-- feet -->
+  <ellipse cx="82" cy="172" rx="16" ry="7" fill="#ff9f1c"/>
+  <ellipse cx="118" cy="172" rx="16" ry="7" fill="#ff9f1c"/>
+</svg>

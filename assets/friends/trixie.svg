@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="A cartoon meerkat wearing a 90s belt pager">
+  <rect width="200" height="200" rx="16" fill="#f5e6c0"/>
+  <ellipse cx="100" cy="188" rx="50" ry="8" fill="#000" opacity=".12"/>
+  <!-- tail -->
+  <path d="M150 150 Q180 120 168 80" fill="none" stroke="#c4954a" stroke-width="10" stroke-linecap="round"/>
+  <!-- body -->
+  <ellipse cx="100" cy="132" rx="36" ry="48" fill="#c4954a"/>
+  <ellipse cx="100" cy="140" rx="22" ry="30" fill="#ead2a8"/>
+  <!-- arms -->
+  <ellipse cx="64" cy="140" rx="10" ry="22" fill="#c4954a"/>
+  <ellipse cx="136" cy="140" rx="10" ry="22" fill="#c4954a"/>
+  <!-- belt + pager -->
+  <rect x="70" y="148" width="60" height="8" fill="#3a2a1a"/>
+  <rect x="118" y="144" width="22" height="16" rx="2" fill="#4a4a4a" stroke="#222" stroke-width="1.5"/>
+  <rect x="121" y="147" width="16" height="6" fill="#7f6"/>
+  <circle cx="136" cy="157" r="1.6" fill="#f44"/>
+  <!-- legs -->
+  <rect x="82" y="168" width="10" height="16" fill="#c4954a"/>
+  <rect x="108" y="168" width="10" height="16" fill="#c4954a"/>
+  <ellipse cx="86" cy="186" rx="10" ry="5" fill="#ead2a8"/>
+  <ellipse cx="114" cy="186" rx="10" ry="5" fill="#ead2a8"/>
+  <!-- head -->
+  <ellipse cx="100" cy="62" rx="32" ry="30" fill="#c4954a"/>
+  <ellipse cx="100" cy="68" rx="20" ry="16" fill="#ead2a8"/>
+  <!-- ears -->
+  <ellipse cx="74" cy="40" rx="10" ry="12" fill="#c4954a"/>
+  <ellipse cx="126" cy="40" rx="10" ry="12" fill="#c4954a"/>
+  <ellipse cx="74" cy="42" rx="4" ry="5" fill="#ead2a8"/>
+  <ellipse cx="126" cy="42" rx="4" ry="5" fill="#ead2a8"/>
+  <!-- eyes -->
+  <circle cx="88" cy="62" r="7" fill="#fff"/>
+  <circle cx="112" cy="62" r="7" fill="#fff"/>
+  <circle cx="90" cy="63" r="3.5" fill="#221"/>
+  <circle cx="114" cy="63" r="3.5" fill="#221"/>
+  <circle cx="91" cy="61.5" r="1.1" fill="#fff"/>
+  <circle cx="115" cy="61.5" r="1.1" fill="#fff"/>
+  <!-- nose smile -->
+  <ellipse cx="100" cy="74" rx="5" ry="3.5" fill="#3a2a1a"/>
+  <path d="M92 80 Q100 86 108 80" fill="none" stroke="#8a4b12" stroke-width="2" stroke-linecap="round"/>
+</svg>
