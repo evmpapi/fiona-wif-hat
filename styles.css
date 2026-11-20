@@ -581,29 +581,156 @@ main {
 .album {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 18px 14px;
+  padding-top: 10px;
 }
 .polaroid {
-  background: #fff;
+  background: #fffef8;
   border: 3px ridge #eee;
-  padding: 8px 8px 28px;
+  padding: 14px 10px 16px;
   text-align: center;
-  box-shadow: 3px 3px 0 #0003;
-  transform: rotate(-1.4deg);
+  box-shadow: 4px 5px 0 #0003;
+  transform: rotate(-1.6deg);
+  position: relative;
 }
-.polaroid:nth-child(2) { transform: rotate(1.6deg); }
+.polaroid:nth-child(2) { transform: rotate(1.7deg); }
+.polaroid:nth-child(3) { transform: rotate(-0.7deg); }
+.polaroid::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  width: 72px;
+  height: 18px;
+  margin-left: -36px;
+  background: rgba(255, 248, 180, 0.82);
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  box-shadow: 0 1px 0 #fff8;
+  transform: rotate(-2deg);
+}
+.polaroid:nth-child(2)::before { transform: rotate(3deg); }
+.polaroid:nth-child(3)::before { transform: rotate(-1deg); }
+.album-open {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+.album-open:focus-visible {
+  outline: 3px dotted #0000ee;
+  outline-offset: 3px;
+}
 .polaroid img {
   width: 100%;
   height: auto;
+  aspect-ratio: auto;
+  object-fit: cover;
   border: 1px solid #333;
   display: block;
+  background: #ddd;
+}
+.enlarge-hint {
+  display: block;
+  margin-top: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #444;
+  text-transform: lowercase;
 }
 .polaroid figcaption {
-  font-size: 13px;
-  margin-top: 6px;
+  font-size: 14px;
+  margin: 8px 4px 0;
   font-weight: 700;
 }
-.polaroid a { font-size: 13px; }
+.photo-credit,
+.photo-credit a {
+  font-size: 11px;
+  line-height: 1.35;
+}
+.photo-credit {
+  margin: 6px 4px 0;
+  color: #333;
+  font-family: var(--times);
+  font-style: italic;
+}
+.album-credits {
+  margin: 16px 2px 4px;
+  font-size: 12px;
+  line-height: 1.45;
+  font-family: var(--times);
+  color: #222;
+}
+
+/* lightbox (click to enlarge) */
+body.lb-open { overflow: hidden; }
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: rgba(0, 0, 40, 0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 12px 24px;
+  overflow: auto;
+}
+.lightbox[hidden] { display: none !important; }
+.lightbox-frame {
+  background: #fffef8;
+  border: 6px ridge #eee;
+  box-shadow: 8px 8px 0 #0006;
+  padding: 12px 12px 16px;
+  max-width: min(920px, 100%);
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.lb-close {
+  display: block;
+  margin: 0 0 10px auto;
+  font-family: var(--comic);
+  font-size: 14px;
+  font-weight: 700;
+  background: #ffcc00;
+  border: 3px outset #ffe87a;
+  color: #000;
+  cursor: pointer;
+  padding: 3px 10px;
+}
+.lb-close:hover, .lb-close:focus-visible { background: #ffe44d; }
+.lightbox-frame img {
+  width: 100%;
+  height: auto;
+  max-height: 72vh;
+  object-fit: contain;
+  border: 2px solid #222;
+  background: #111;
+  display: block;
+  cursor: zoom-out;
+}
+.lb-caption {
+  margin: 10px 0 0;
+  font-weight: 700;
+  font-size: 16px;
+}
+.lb-credit {
+  margin: 6px 0 0;
+  font-family: var(--times);
+  font-size: 12px;
+  font-style: italic;
+  color: #333;
+}
+.lb-hint {
+  margin: 8px 0 0;
+  font-size: 11px;
+  color: #555;
+}
 
 /* certificate */
 .certificate {
@@ -873,7 +1000,8 @@ main {
   .thermo { height: 110px; }
   .album { grid-template-columns: 1fr; }
   .polaroid,
-  .polaroid:nth-child(2) { transform: none; }
+  .polaroid:nth-child(2),
+  .polaroid:nth-child(3) { transform: none; }
   .chart-frame iframe { height: 320px; }
   .sticky-buy { display: block; }
   .wordart {
@@ -904,11 +1032,11 @@ main {
   .sparkle { display: none !important; }
   html { scroll-behavior: auto; }
   .wordart { transform: none; }
-  .polaroid, .polaroid:nth-child(2) { transform: none; }
+  .polaroid, .polaroid:nth-child(2), .polaroid:nth-child(3) { transform: none; }
 }
 
 @media print {
-  .sticky-buy, .sparkle { display: none !important; }
+  .sticky-buy, .sparkle, .lightbox { display: none !important; }
 }
 
 

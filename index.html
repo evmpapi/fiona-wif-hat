@@ -336,19 +336,45 @@
 
         <section class="panel" id="album">
           <h2>Fiona's Photo Album <span class="new-badge blink">NEW!</span></h2>
-          <p>Right-click or use the download links for 1000×1000 PNGs, ready to post.</p>
+          <p>A real photo of Fiona, plus her hat memes. Click a polaroid to enlarge.</p>
           <div class="album">
             <figure class="polaroid">
-              <img src="assets/fiona-hero-600.jpg" width="600" height="600" alt="Fiona in her pink beanie, no caption">
-              <figcaption>Fiona (clean square)</figcaption>
-              <a href="assets/memes/fiona-square-1000.png" download="fiona-square-1000.png">Download 1000×1000 PNG</a>
+              <button type="button" class="album-open" data-full="assets/album/fiona-nuzzling-bibi.jpg" aria-label="Enlarge: Fiona nuzzling her mama">
+                <img src="assets/album/fiona-nuzzling-bibi.jpg" width="1200" height="1091" alt="Fiona the hippo nuzzling her mother">
+                <span class="enlarge-hint">click to enlarge</span>
+              </button>
+              <figcaption>Fiona nuzzling her mama (May 2018)</figcaption>
+              <p class="photo-credit">Photo by DarthBotto · <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer license" target="_blank">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Fiona_the_Hippopotamus.jpg" rel="noopener noreferrer" target="_blank">Wikimedia Commons</a></p>
             </figure>
             <figure class="polaroid">
-              <img src="assets/fiona-meme-600.jpg" width="600" height="600" alt="Fiona in her pink beanie, captioned FIONA WIF HAT">
+              <button type="button" class="album-open" data-full="assets/album/fiona-clean-square.jpg" aria-label="Enlarge: Fiona clean square meme">
+                <img src="assets/album/fiona-clean-square.jpg" width="1000" height="1000" alt="Fiona in her pink beanie, no caption">
+                <span class="enlarge-hint">click to enlarge</span>
+              </button>
+              <figcaption>Fiona (clean square)</figcaption>
+              <p class="photo-credit">Original site art · Fiona wif hat meme · <a href="assets/memes/fiona-square-1000.png" download="fiona-square-1000.png">Download 1000×1000 PNG</a></p>
+            </figure>
+            <figure class="polaroid">
+              <button type="button" class="album-open" data-full="assets/album/fiona-wif-hat-meme.jpg" aria-label="Enlarge: FIONA WIF HAT meme">
+                <img src="assets/album/fiona-wif-hat-meme.jpg" width="1000" height="1000" alt="Fiona in her pink beanie, captioned FIONA WIF HAT">
+                <span class="enlarge-hint">click to enlarge</span>
+              </button>
               <figcaption>FIONA WIF HAT (meme)</figcaption>
-              <a href="assets/memes/fiona-wif-hat-meme-1000.png" download="fiona-wif-hat-meme-1000.png">Download 1000×1000 PNG</a>
+              <p class="photo-credit">Original site art · Fiona wif hat meme · <a href="assets/memes/fiona-wif-hat-meme-1000.png" download="fiona-wif-hat-meme-1000.png">Download 1000×1000 PNG</a></p>
             </figure>
           </div>
+          <p class="album-credits">
+            <strong>Photo credits:</strong>
+            The real photograph is
+            <a href="https://commons.wikimedia.org/wiki/File:Fiona_the_Hippopotamus.jpg" rel="noopener noreferrer" target="_blank">“Fiona the Hippopotamus”</a>
+            by DarthBotto, licensed
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer license" target="_blank">CC BY-SA 4.0</a>,
+            via Wikimedia Commons (resized here for the web).
+            The beanie pictures are original Fiona wif hat meme art from this site (downloadable as 1000×1000 PNGs).
+            Openly licensed photos of Fiona are scarce — Wikimedia Commons, Flickr, Openverse, and public-domain sources were searched, and only this one unique photograph clearly carried a CC BY / CC BY-SA / CC0 / public-domain license.
+            Photos offered only under non-commercial or no-derivatives licenses were not used.
+            This page is not affiliated with any zoo.
+          </p>
         </section>
 
         <hr class="rainbow-hr">
@@ -413,6 +439,17 @@
   <div class="sticky-buy" id="sticky-buy">
     <a class="btn-buy js-buy" href="#" rel="noopener noreferrer" target="_blank">HONOR FIONA — BUY $FIONA</a>
     <p class="fine">Memecoin purchase, not a donation. Not a charity.</p>
+  </div>
+
+
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="lightbox-frame" role="dialog" aria-modal="true" aria-labelledby="lb-caption">
+      <button type="button" class="lb-close" id="lb-close">× close</button>
+      <img id="lb-img" alt="">
+      <p class="lb-caption" id="lb-caption"></p>
+      <p class="lb-credit" id="lb-credit"></p>
+      <p class="lb-hint">click the photo, press Esc, or hit close</p>
+    </div>
   </div>
 
   <script src="config.js"></script>

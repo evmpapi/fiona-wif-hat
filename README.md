@@ -18,9 +18,10 @@ Static HTML, CSS, and JS. No build step, no framework, no Netlify/Vercel require
 index.html      the page
 styles.css      the look
 config.js       contract, buy link, chart, socials, profile song  <-- edit this
-app.js          copy-CA, guestbook, counter, sparkles, YouTube player
+app.js          copy-CA, guestbook, counter, sparkles, YouTube player, album lightbox
 assets/         images, tiles, 88x31 badges, OG card
 assets/memes/   downloadable 1000x1000 PNGs
+assets/album/   photo album JPEGs (max ~1200px)
 ```
 
 ## Where to plug in X and Telegram
@@ -55,3 +56,5 @@ Then open http://localhost:8080
 ## License / credit
 
 Art is Fiona in a beanie. The site is a parody of late-90s "save the animals" homepages, not an affiliation with any zoo or park.
+
+The Photo Album includes one openly licensed photograph: [Fiona the Hippopotamus](https://commons.wikimedia.org/wiki/File:Fiona_the_Hippopotamus.jpg) by DarthBotto, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), via Wikimedia Commons (resized for the web). A search of Wikimedia Commons, Flickr, Openverse, and public-domain sources found only this one unique photograph of Fiona under CC BY, CC BY-SA, CC0, or public domain. The beanie pictures are original site meme art.

@@ -192,6 +192,68 @@
     });
   }
 
+  /* ----- photo album lightbox ----- */
+  var lb = document.getElementById("lightbox");
+  var lbImg = document.getElementById("lb-img");
+  var lbCap = document.getElementById("lb-caption");
+  var lbCredit = document.getElementById("lb-credit");
+  var lbClose = document.getElementById("lb-close");
+  var lbLastFocus = null;
+
+  function openLightbox(btn) {
+    if (!lb || !lbImg) return;
+    var fig = btn.closest("figure");
+    var thumb = btn.querySelector("img");
+    var full = btn.getAttribute("data-full") || (thumb && thumb.getAttribute("src"));
+    if (!full) return;
+    lbImg.src = full;
+    lbImg.alt = (thumb && thumb.alt) || "";
+    if (lbCap) {
+      var cap = fig && fig.querySelector("figcaption");
+      lbCap.textContent = cap ? cap.textContent : "";
+    }
+    if (lbCredit) {
+      lbCredit.textContent = "";
+      var cred = fig && fig.querySelector(".photo-credit");
+      if (cred) {
+        Array.prototype.forEach.call(cred.childNodes, function (n) {
+          lbCredit.appendChild(n.cloneNode(true));
+        });
+      }
+    }
+    lbLastFocus = document.activeElement;
+    lb.hidden = false;
+    document.body.classList.add("lb-open");
+    if (lbClose) lbClose.focus();
+  }
+
+  function closeLightbox() {
+    if (!lb || lb.hidden) return;
+    lb.hidden = true;
+    document.body.classList.remove("lb-open");
+    if (lbImg) {
+      lbImg.removeAttribute("src");
+      lbImg.alt = "";
+    }
+    if (lbLastFocus && typeof lbLastFocus.focus === "function") {
+      try { lbLastFocus.focus(); } catch (e) {}
+    }
+  }
+
+  document.querySelectorAll(".album-open").forEach(function (btn) {
+    btn.addEventListener("click", function () { openLightbox(btn); });
+  });
+  if (lbClose) lbClose.addEventListener("click", closeLightbox);
+  if (lbImg) lbImg.addEventListener("click", closeLightbox);
+  if (lb) {
+    lb.addEventListener("click", function (ev) {
+      if (ev.target === lb) closeLightbox();
+    });
+  }
+  document.addEventListener("keydown", function (ev) {
+    if (ev.key === "Escape") closeLightbox();
+  });
+
   /* ----- webring (decorative, 1 of 1) ----- */
   function ateTheRing() {
     alert("Fiona ate the other sites in the ring.\nYou are already home.\n(This is a decorative web ring, not a link to anyone else.)");
