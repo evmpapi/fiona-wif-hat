@@ -1129,7 +1129,7 @@ body.lb-open { overflow: hidden; }
   .nav { font-size: 13px; padding: 8px 6px 10px; }
   .construction { margin-top: 4px; }
   main { padding: 10px 8px 20px; }
-  section, #guestbook, #webring, #lore, #ca, #manifesto, #howto, #chart, #tokenomics, #memes, #community, #profile-song {
+  section, #guestbook, #webring, #lore, #ca, #manifesto, #howto, #chart, #tokenomics, #memes, #rip-tee, #community, #profile-song {
     scroll-margin-top: 52px;
     scroll-margin-bottom: 108px;
   }
@@ -1591,4 +1591,15 @@ body.lb-open { overflow: hidden; }
 @media (min-width: 701px) {
   .tweet-wall { grid-template-columns: 1fr 1fr; }
   .news-wall { grid-template-columns: 1fr 1fr; }
+}
+
+
+/* Official RIP Tee */
+.rip-tee-card {
+  max-width: 360px;
+  margin: 12px auto 8px;
+}
+.rip-tee-card img {
+  width: 100%;
+  height: auto;
 }
