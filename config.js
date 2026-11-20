@@ -13,7 +13,7 @@
 
 window.FIONA_CONFIG = {
   siteUrl: "https://fionawifhat.wtf/",
-  ticker: "$FIONA",
+  ticker: "$FWIF",
   name: "Fiona Wif Hat",
   ca: "B9YcMn7rXbiQAYWJaChmdfbDKmmtFyw3n5JjtPQ7pump",
   buyUrl:
