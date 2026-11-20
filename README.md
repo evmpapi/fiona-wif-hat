@@ -2,7 +2,7 @@
 
 A one-page, late-90s / GeoCities-style homepage for the [$FIONA](https://pump.fun/coin/B9YcMn7rXbiQAYWJaChmdfbDKmmtFyw3n5JjtPQ7pump?caller=EF1P3tcwAc5M9mTLQ7YaxjRVpGHLNz5237Cq1mkW3LQL&ref=crankycrab68879) memecoin.
 
-Live: <https://fiona-wif-hat.surge.sh/>
+Live: <https://fionawifhat.wtf/> (also at <https://fiona-wif-hat.surge.sh/>)
 
 In loving memory of Fiona Wif Hat, ???? – 2026. She was a hippo who saw a hat and simply ate it. Gone but not forgotten. Dogs wear hats. Hippos eat them.
 
@@ -12,7 +12,7 @@ The "honor Fiona" / "sponsor a hip zoo animal" framing is a joke. **No money goe
 
 ## How this is built
 
-Static HTML, CSS, and JS. No build step, no framework, no Netlify/Vercel required. The site is hosted on [Surge](https://surge.sh) at [fiona-wif-hat.surge.sh](https://fiona-wif-hat.surge.sh/). Source lives on GitHub.
+Static HTML, CSS, and JS. No build step, no framework, no Netlify/Vercel required. The site is hosted on [Surge](https://surge.sh) at [fionawifhat.wtf](https://fionawifhat.wtf/). The previous address [fiona-wif-hat.surge.sh](https://fiona-wif-hat.surge.sh/) stays live. Source lives on GitHub.
 
 ```
 index.html      the page

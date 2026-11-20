@@ -13,7 +13,7 @@
  * ============================================================ */
 
 window.FIONA_CONFIG = {
-  siteUrl: "https://fiona-wif-hat.surge.sh/",
+  siteUrl: "https://fionawifhat.wtf/",
   ticker: "$FIONA",
   name: "Fiona Wif Hat",
   ca: "B9YcMn7rXbiQAYWJaChmdfbDKmmtFyw3n5JjtPQ7pump",
