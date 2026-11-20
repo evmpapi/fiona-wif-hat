@@ -3,10 +3,9 @@
  * ------------------------------------------------------------
  * This is the ONE place to update the contract, buy link, chart,
  * socials, the public site URL, and Fiona's profile song.
- * When the X account or Telegram group is live, paste the full
- * URL into the field below and leave the other one as "" until
- * it exists. Empty strings render as "coming soon" so we never
- * ship a broken link.
+ * Official socials live in socials.x and socials.telegram below.
+ * Leave a field as "" and the nav will render "coming soon"
+ * instead of shipping a broken link.
  *
  * To swap the profile song, paste another official YouTube
  * video ID into songYoutubeId (we only embed; we never host audio).
@@ -30,9 +29,7 @@ window.FIONA_CONFIG = {
   songTitle: "My Heart Will Go On",
   songArtist: "Celine Dion",
   socials: {
-    // TODO: paste the live X (Twitter) profile URL once the account exists.
-    x: "",
-    // TODO: paste the Telegram invite URL once the group exists.
-    telegram: "",
+    x: "https://x.com/urhippobaddie",
+    telegram: "https://t.me/+3rofjQMKvI85YzNh",
   },
 };

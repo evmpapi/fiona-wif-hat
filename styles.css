@@ -488,6 +488,51 @@ main {
   max-width: 28ch;
 }
 
+/* X / Telegram, 90s outset buttons */
+.hero-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 10px 0 0;
+}
+.cta-row.social-cta {
+  margin: 10px 0 0;
+}
+.btn-social {
+  display: inline-block;
+  font-family: var(--comic);
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none !important;
+  text-align: center;
+  padding: 8px 12px;
+  min-height: 40px;
+  line-height: 1.2;
+  border: 3px outset #eee;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 #0004;
+}
+.btn-social:hover { filter: brightness(1.06); }
+.btn-social:active {
+  border-style: inset;
+  transform: translate(1px, 1px);
+}
+.btn-x {
+  background: linear-gradient(#333, #111);
+  color: #fff !important;
+  border-color: #666;
+  text-shadow: 0 1px 0 #000;
+}
+.btn-x:visited { color: #fff !important; }
+.btn-tg {
+  background: linear-gradient(#7fd4ff, #229ed9);
+  color: #002 !important;
+  border-color: #9ee4ff;
+  text-shadow: 0 1px 0 #fff8;
+}
+.btn-tg:visited { color: #002 !important; }
+
 /* contract address */
 .ca-box {
   background: #111;

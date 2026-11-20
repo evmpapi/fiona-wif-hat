@@ -24,18 +24,12 @@ assets/memes/   downloadable 1000x1000 PNGs
 assets/album/   photo album JPEGs (max ~1200px)
 ```
 
-## Where to plug in X and Telegram
+## Official socials
 
-Open [`config.js`](config.js). Paste the live profile or invite URL into `socials.x` and/or `socials.telegram`. Leave a field as `""` and the nav will keep saying "coming soon" instead of shipping a broken link.
+- X: [@urhippobaddie](https://x.com/urhippobaddie)
+- Telegram: [t.me/+3rofjQMKvI85YzNh](https://t.me/+3rofjQMKvI85YzNh)
 
-```js
-socials: {
-  // TODO: paste the live X (Twitter) profile URL once the account exists.
-  x: "",
-  // TODO: paste the Telegram invite URL once the group exists.
-  telegram: "",
-},
-```
+Those URLs live in [`config.js`](config.js) as `socials.x` and `socials.telegram`. Leave a field as `""` and the nav will keep saying "coming soon" instead of shipping a broken link.
 
 The contract address, pump.fun buy link, and DexScreener chart URLs also live in that same file.
 

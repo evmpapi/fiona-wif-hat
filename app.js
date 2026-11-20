@@ -28,12 +28,37 @@
     });
   }
 
-  /* ----- socials: empty string => coming soon (the TODO lives in config.js) ----- */
+  /* ----- socials: empty string => coming soon (URLs live in config.js) ----- */
+  document.querySelectorAll(".js-social-x").forEach(function (el) {
+    wireSocial(el, socials.x, "X");
+  });
+  document.querySelectorAll(".js-social-tg").forEach(function (el) {
+    wireSocial(el, socials.telegram, "Telegram");
+  });
+
   var navSocials = document.getElementById("nav-socials");
-  if (navSocials) {
+  if (navSocials && !navSocials.querySelector("a, .soon")) {
     navSocials.appendChild(socialNav("X", socials.x));
     navSocials.appendChild(sep());
     navSocials.appendChild(socialNav("Telegram", socials.telegram));
+  }
+
+  function wireSocial(el, url, label) {
+    if (url) {
+      el.href = url;
+      el.target = "_blank";
+      el.rel = "noopener noreferrer";
+      el.hidden = false;
+      return;
+    }
+    if (el.classList.contains("btn-social")) {
+      el.hidden = true;
+      return;
+    }
+    var span = document.createElement("span");
+    span.className = "soon";
+    span.textContent = label + " (soon)";
+    el.replaceWith(span);
   }
 
   function sep() {
