@@ -192,6 +192,34 @@
     });
   }
 
+  /* ----- official X embeds: load widgets.js only when the wall is near ----- */
+  var tweetWall = document.getElementById("fiona-posts") || document.getElementById("tweet-wall");
+  if (tweetWall) {
+    var tweetsLoaded = false;
+    var loadTweets = function () {
+      if (tweetsLoaded) return;
+      tweetsLoaded = true;
+      var s = document.createElement("script");
+      s.src = "https://platform.twitter.com/widgets.js";
+      s.async = true;
+      s.charset = "utf-8";
+      document.body.appendChild(s);
+    };
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            loadTweets();
+            io.disconnect();
+          }
+        });
+      }, { rootMargin: "500px 0px" });
+      io.observe(tweetWall);
+    } else {
+      loadTweets();
+    }
+  }
+
   /* ----- photo album lightbox ----- */
   var lb = document.getElementById("lightbox");
   var lbImg = document.getElementById("lb-img");

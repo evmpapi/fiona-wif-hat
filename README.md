@@ -58,3 +58,5 @@ Then open http://localhost:8080
 Art is Fiona in a beanie. The site is a parody of late-90s "save the animals" homepages, not an affiliation with any zoo or park.
 
 The Photo Album includes one openly licensed photograph: [Fiona the Hippopotamus](https://commons.wikimedia.org/wiki/File:Fiona_the_Hippopotamus.jpg) by DarthBotto, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), via Wikimedia Commons (resized for the web). A search of Wikimedia Commons, Flickr, Openverse, and public-domain sources found only this one unique photograph of Fiona under CC BY, CC BY-SA, CC0, or public domain. The beanie pictures are original site meme art.
+
+Additional real photos appear only as official public embeds of [@CincinnatiZoo](https://x.com/CincinnatiZoo) posts on X (twitter blockquote + `widgets.js`, lazy-loaded). Copyrighted news photos are not downloaded or rehosted. "Fiona in the News" is a text-only wall of headlines linking out to the original articles. This page is not affiliated with the Cincinnati Zoo or any newsroom.

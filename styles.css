@@ -1014,7 +1014,7 @@ body.lb-open { overflow: hidden; }
   .nav { font-size: 13px; padding: 8px 6px 10px; }
   .construction { margin-top: 4px; }
   main { padding: 10px 8px 20px; }
-  section, #guestbook, #webring, #honor, #sponsor, #howto, #chart, #album, #home, #manifesto, #profile-song, #top8 {
+  section, #guestbook, #webring, #honor, #sponsor, #howto, #chart, #album, #fiona-posts, #news, #home, #manifesto, #profile-song, #top8 {
     scroll-margin-top: 52px;
     scroll-margin-bottom: 108px;
   }
@@ -1392,4 +1392,88 @@ body.lb-open { overflow: hidden; }
 }
 @media (prefers-reduced-motion: reduce) {
   .online-dot { animation: none; }
+}
+
+/* official X embeds (lazy-loaded widgets.js) */
+.tweet-wall {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 12px;
+}
+.tweet-card {
+  background: #fffef8;
+  border: 3px ridge #eee;
+  box-shadow: 3px 3px 0 #0003;
+  padding: 8px 8px 4px;
+  min-width: 0;
+  overflow: hidden;
+}
+.tweet-card .twitter-tweet,
+.tweet-card iframe,
+.tweet-card twitter-widget {
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.tweet-card .twitter-tweet {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Fiona in the News — text-only cards, no images */
+.news-wall {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.news-card {
+  background: var(--parchment);
+  border: 3px ridge #eee;
+  box-shadow: 3px 3px 0 #0003;
+}
+.news-card a {
+  display: block;
+  padding: 10px 12px 12px;
+  text-decoration: none;
+  color: inherit;
+}
+.news-card a:hover {
+  background: #fff8c4;
+}
+.news-outlet {
+  display: block;
+  font-family: var(--comic);
+  font-size: 13px;
+  font-weight: 700;
+  color: #0000ee;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.news-date {
+  display: block;
+  font-family: var(--times);
+  font-size: 12px;
+  font-style: italic;
+  color: #444;
+  margin: 2px 0 6px;
+}
+.news-headline {
+  display: block;
+  font-family: var(--times);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #111;
+  text-decoration: underline;
+}
+.news-card a:hover .news-headline { color: #ff00ff; }
+.news-card a:visited .news-outlet { color: #551a8b; }
+
+@media (min-width: 701px) {
+  .tweet-wall { grid-template-columns: 1fr 1fr; }
+  .news-wall { grid-template-columns: 1fr 1fr; }
 }
