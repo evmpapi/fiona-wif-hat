@@ -2,7 +2,7 @@
 
 A one-page, late-90s / GeoCities-style homepage for the [$FIONA](https://pump.fun/coin/B9YcMn7rXbiQAYWJaChmdfbDKmmtFyw3n5JjtPQ7pump?caller=EF1P3tcwAc5M9mTLQ7YaxjRVpGHLNz5237Cq1mkW3LQL&ref=crankycrab68879) memecoin.
 
-Live: <https://evmpapi.github.io/fiona-wif-hat/>
+Live: <https://fiona-wif-hat.surge.sh/>
 
 Fiona is a hippo who saw a hat and simply ate it. Dogs wear hats. Hippos eat them.
 
@@ -12,7 +12,7 @@ The "adopt a hippo" / "sponsor Fiona's hat fund" framing is a joke. **No money g
 
 ## How this is built
 
-Static HTML, CSS, and JS. No build step, no framework, no Netlify/Vercel required. GitHub Pages serves `main` from `/`.
+Static HTML, CSS, and JS. No build step, no framework, no Netlify/Vercel required. The site is hosted on [Surge](https://surge.sh) at [fiona-wif-hat.surge.sh](https://fiona-wif-hat.surge.sh/). Source lives on GitHub.
 
 ```
 index.html      the page

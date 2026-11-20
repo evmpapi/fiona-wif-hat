@@ -2,13 +2,14 @@
  * Fiona site config
  * ------------------------------------------------------------
  * This is the ONE place to update the contract, buy link, chart,
- * and socials. When the X account or Telegram group is live,
+ * socials, and the public site URL. When the X account or Telegram group is live,
  * paste the full URL into the field below and leave the other
  * one as "" until it exists. Empty strings render as
  * "coming soon" so we never ship a broken link.
  * ============================================================ */
 
 window.FIONA_CONFIG = {
+  siteUrl: "https://fiona-wif-hat.surge.sh/",
   ticker: "$FIONA",
   name: "Fiona Wif Hat",
   ca: "B9YcMn7rXbiQAYWJaChmdfbDKmmtFyw3n5JjtPQ7pump",
