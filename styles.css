@@ -162,6 +162,11 @@ a:active { color: #ff0000; }
   color: #4a0030;
   text-shadow: 1px 1px 0 #fff;
 }
+.hero-tagline {
+  font-size: clamp(1.15rem, 3.6vw, 1.55rem);
+  font-style: italic;
+  margin: 6px 8px 8px;
+}
 
 .construction {
   display: block;
@@ -408,6 +413,41 @@ main {
 
 .bio {
   font-size: 1.02rem;
+}
+
+/* angry 90s manifesto */
+.manifesto {
+  background: #7a0000;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #7a0000 0 12px,
+    #990000 12px 24px
+  );
+  color: #fff;
+  border: 6px ridge #ffee00;
+  box-shadow: 4px 4px 0 #400, inset 0 0 0 3px #c00;
+  padding: 14px 16px 16px;
+  margin: 10px;
+  text-align: center;
+}
+.manifesto h2 {
+  font-family: var(--comic);
+  font-size: clamp(1.35rem, 4.5vw, 2rem);
+  color: #ffff00;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #ff0;
+  margin: 0 0 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.manifesto p {
+  margin: 0 auto;
+  max-width: 46ch;
+  font-size: clamp(1.05rem, 2.8vw, 1.2rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.45;
+  text-shadow: 1px 1px 0 #000;
 }
 
 /* buy CTA */
@@ -846,7 +886,7 @@ main {
   .nav { font-size: 13px; padding: 8px 6px 10px; }
   .construction { margin-top: 4px; }
   main { padding: 10px 8px 20px; }
-  section, #hatfund, #guestbook, #webring, #certificate, #adopt, #howto, #chart, #album, #home {
+  section, #hatfund, #guestbook, #webring, #certificate, #adopt, #howto, #chart, #album, #home, #manifesto {
     scroll-margin-top: 52px;
     scroll-margin-bottom: 108px;
   }
@@ -873,7 +913,7 @@ main {
   .parody-bar, .header, .marquee-wrap, .nav, .sidebar,
   .sticky-buy, .footer, .webring, .skip,
   .cert-controls, #home, #adopt, #howto, #chart, #album, #guestbook,
-  hr, .panel:not(.cert-panel) { display: none !important; }
+  hr, .manifesto, .panel:not(.cert-panel) { display: none !important; }
   .page, main, .shell, .cert-panel { display: block; background: #fff; border: 0; box-shadow: none; width: 100%; margin: 0; padding: 0; }
   .certificate { outline-offset: -10px; break-inside: avoid; }
 }
